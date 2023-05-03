@@ -57,3 +57,14 @@ sudoku.c:49:7: error: variable ‘filas’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 baf953f
+Wed 03 May 2023 07:30:05 PM UTC: 
+ sudoku.c | 24 ++++++++++++++----------
+ 1 file changed, 14 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:51:7: error: unused variable ‘submatriz’ [-Werror=unused-variable]
+   51 |   int submatriz[3][3];
+      |       ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+aaeb2bb
