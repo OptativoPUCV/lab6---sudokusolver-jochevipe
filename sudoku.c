@@ -45,7 +45,28 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
+  Node *aux = copy(n);
+  int filas[9] = {0};
+  int columnas[9] = {0};
+  int submatriz[9] = {0};
+  
+    for(int i=0 ; i<9 ; i++){
 
+      filas[i] = 0;
+      columnas[i] = 0;
+        
+        for(int k=1 ;k<10; k++){
+          if(aux->sudo[i][j] == k){
+            filas[j] = 1;
+            
+          }
+        }
+
+        
+
+        
+      
+    }
 
 
 
