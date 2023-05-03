@@ -48,7 +48,7 @@ int is_valid(Node* n){
   Node *aux = copy(n);
   int contF =0;
   int contC =0;
-  int submatriz[3][3];
+ // int submatriz[3][3];
   
   for(int i=0 ; i<9 ; i++){
         
@@ -65,7 +65,9 @@ int is_valid(Node* n){
           contC++;
           if(contC == 2) return 0;
         }
-            
+
+
+        
       }
           
           
