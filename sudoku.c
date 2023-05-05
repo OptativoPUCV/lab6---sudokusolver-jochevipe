@@ -55,18 +55,18 @@ int is_valid(Node* n){
     for(int j=0 ; j<9 ; j++){
 
       if(n->sudo[i][j] != 0){
-        if(filas[n->sudo[i][j]] == 1){
-          return 0;
-        }else{
+        if(filas[n->sudo[i][j]] == 0){
           filas[n->sudo[i][j]] = 1;
+        }else{
+          return 0;
         }
       }
       
       if(n->sudo[j][i] != 0){
-        if(columnas[n->sudo[j][i]] == 1){
-          return 0;
-        }else{
+        if(columnas[n->sudo[j][i]] == 0){
           columnas[n->sudo[j][i]] = 1;
+        }else{
+          return 0;
         }
       }
 
@@ -75,10 +75,10 @@ int is_valid(Node* n){
 
       
       if(n->sudo[subI][subJ] != 0){
-        if(submatriz[n->sudo[subI][subJ]] == 1){
-          return 0;
-        }else{
+        if(submatriz[n->sudo[subI][subJ]] == 0){
           submatriz[n->sudo[subI][subJ]] = 1;
+        }else{
+          return 0;
         }
       }
 
