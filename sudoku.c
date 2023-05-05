@@ -45,49 +45,58 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-  Node *aux = copy(n);
-  
   
   for(int i=0 ; i<9 ; i++){
-    int contF =0;
-    int contC =0;
-    int contSubmatriz =0;
-    for(int k=0 ;k<9; k++){
-      
-      for(int j=0 ; j< 10 ; j++){
+    
+    int filas[10] = {0};
+    int columnas[10] = {0};
+    int submatriz[10] = {0};
+    
+    for(int j=0 ; i<9 ; i++){
 
-        if(aux->sudo[i][k] == j){
-          contF++;
-          if(contF == 2) return 0;
+      if(n->sudo[i][j] != 0){
+        if(filas[n->sudo[i][j]] == 0){
+          filas[n->sudo[i][j]] = 1;
+        }else{
+          return 0;
         }
-
-        if(aux->sudo[k][i] == j){
-          contC++;
-          if(contC == 2) return 0;
-        }
-
-        for(int p=0 ; p<9 ;p++){
-          
-          int l=3*(j/3) + (p/3) ;
-          int m=3*(j%3) + (p%3) ;
-
-          if(aux->sudo[l][m] == j){
-            contSubmatriz++;
-            if(contSubmatriz == 2) return 0;
-          }
-          
-        }
-        
       }
-          
-          
+      
+      if(n->sudo[j][i] != 0){
+        if(columnas[n->sudo[j][i]] == 0){
+          columnas[n->sudo[j][i]] = 1;
+        }else{
+          return 0;
+        }
+      }
+
+      int subI=3*(i/3) + (j/3) ;
+      int subJ=3*(i%3) + (j%3) ;
+
+      
+      if(n->sudo[subI][subJ] != 0){
+        if(submatriz[n->sudo[subI][subJ]] == 0){
+          submatriz[n->sudo[subI][subJ]] = 1;
+        }else{
+          return 0;
+        }
+      }
+
+      
     }
+      
+
+
+
+    
   }
 
 
 
 
-  
+    
+
+
   return 1;
 }
 
