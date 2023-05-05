@@ -74,7 +74,7 @@ int is_valid(Node* n){
       int subJ=3*(i%3) + (j%3) ;
 
       
-      if(n->sudo[subI][subJ] != 0){
+      if(n->sudo[subI][subJ] == 0){
         if(submatriz[n->sudo[subI][subJ]] == 0){
           submatriz[n->sudo[subI][subJ]] = 1;
         }else{
@@ -82,21 +82,9 @@ int is_valid(Node* n){
         }
       }
 
-      
     }
-      
-
-
-
-    
   }
-
-
-
-
-    
-
-
+  
   return 1;
 }
 
