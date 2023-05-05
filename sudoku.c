@@ -49,12 +49,11 @@ int is_valid(Node* n){
   
   
   for(int i=0 ; i<9 ; i++){
-        
+    int contF =0;
+    int contC =0;
+    int contSubmatriz =0;
     for(int k=0 ;k<9; k++){
-
-      int contF =0;
-      int contC =0;
-      int contSubmatriz =0;
+      
       for(int j=0 ; j< 10 ; j++){
 
         if(aux->sudo[i][k] == j){
