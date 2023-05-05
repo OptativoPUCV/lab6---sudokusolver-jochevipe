@@ -52,7 +52,7 @@ int is_valid(Node* n){
     int columnas[10] = {0};
     int submatriz[10] = {0};
     
-    for(int j=0 ; i<9 ; i++){
+    for(int i=0 ; i<9 ; i++){
 
       if(n->sudo[i][j] != 0){
         if(filas[n->sudo[i][j]] == 1){

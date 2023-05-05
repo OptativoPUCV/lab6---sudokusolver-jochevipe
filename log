@@ -110,3 +110,21 @@ Fri 05 May 2023 07:01:35 PM UTC:
  tests:  3|4
 total_score: 20/70
 e5b8f30
+Fri 05 May 2023 07:05:15 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:57:21: error: ‘j’ undeclared (first use in this function)
+   57 |       if(n->sudo[i][j] != 0){
+      |                     ^
+sudoku.c:57:21: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:52:9: error: variable ‘columnas’ set but not used [-Werror=unused-but-set-variable]
+   52 |     int columnas[10] = {0};
+      |         ^~~~~~~~
+sudoku.c:51:9: error: variable ‘filas’ set but not used [-Werror=unused-but-set-variable]
+   51 |     int filas[10] = {0};
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5a722d1
